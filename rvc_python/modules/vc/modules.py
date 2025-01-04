@@ -103,6 +103,7 @@ class VC:
         self.cpt = torch.load(sid, map_location="cpu")
         print(f"Config: {self.cpt['config']}")
         print(f"Is Half: {self.config.is_half}")
+        print(f"type: {type(self.cpt)}")
         
         self.tgt_sr = self.cpt["config"][-1]
         self.cpt["config"][-3] = self.cpt["weight"]["emb_g.weight"].shape[0]  # n_spk
