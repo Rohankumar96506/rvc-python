@@ -122,7 +122,7 @@ class VC:
 
         self.net_g = synthesizer_class.get(
             (self.version, self.if_f0), SynthesizerTrnMs256NSFsid
-        )(*self.cpt["config"][:19], is_half=self.config.is_half)
+        )(*self.cpt["config"][:18], is_half=self.config.is_half)
 
         del self.net_g.enc_q
 
