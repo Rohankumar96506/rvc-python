@@ -116,6 +116,9 @@ class VC:
             ("v2", 0): SynthesizerTrnMs768NSFsid_nono,
         }
 
+        print(f"Config: {self.cpt['config']}")
+        print(f"Is Half: {self.config.is_half}")
+
         self.net_g = synthesizer_class.get(
             (self.version, self.if_f0), SynthesizerTrnMs256NSFsid
         )(*self.cpt["config"], is_half=self.config.is_half)
