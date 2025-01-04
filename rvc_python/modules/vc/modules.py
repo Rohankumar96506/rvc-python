@@ -106,7 +106,7 @@ class VC:
         print(f"type: {type(self.cpt)}")
         
         self.tgt_sr = self.cpt["config"][-1]
-        self.cpt["config"][-3] = self.cpt["weight"]["emb_g.weight"].shape[0]  # n_spk
+        self.cpt["config"][-4] = self.cpt["weight"]["emb_g.weight"].shape[0]  # n_spk
         self.if_f0 = self.cpt.get("f0", 1)
         self.version = version
 
